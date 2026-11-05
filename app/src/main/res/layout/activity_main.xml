@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Contenedor principal: permite desplazar la pantalla
+     verticalmente cuando el contenido lo necesita. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FA"
+    android:fillViewport="true">
+
+    <!-- Distribuye los elementos de la aplicación
+         de arriba hacia abajo. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Nombre de la aplicación. -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CITYTOUR"
+            android:textColor="#183153"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+        <!-- Ubicación del monumento. -->
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descubre León, Guanajuato"
+            android:textColor="#60758B"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Imagen principal del carrusel. -->
+        <ImageView
+            android:id="@+id/imgMonumento"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="22dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Fotografía del Arco de la Calzada"
+            android:src="@drawable/arco_01"/>
+
+        <!-- Indica la posición de la imagen actual. -->
+        <TextView
+            android:id="@+id/tvContador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Imagen 1 de 3"
+            android:textColor="#183153"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Controles para cambiar las fotografías. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnAnterior"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:minHeight="48dp"
+                android:text="Anterior"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#315F8C"/>
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:minHeight="48dp"
+                android:text="Siguiente"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#315F8C"/>
+
+        </LinearLayout>
+
+        <!-- Información breve del monumento. -->
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conoce la historia de uno de los monumentos más representativos de León y descubre los detalles que forman parte de su identidad."
+            android:textColor="#455468"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="22dp"/>
+
+        <!-- Título de la sección de audio. -->
+        <TextView
+            android:id="@+id/tvTituloAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audioguía histórica"
+            android:textColor="#183153"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Muestra el estado actual del reproductor. -->
+        <TextView
+            android:id="@+id/tvEstadoAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado: audio detenido"
+            android:textColor="#60758B"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Botones de control del reproductor. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:minHeight="48dp"
+                android:text="Reproducir"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#27845B"/>
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                android:minHeight="48dp"
+                android:text="Pausar"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#C18A32"/>
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:minHeight="48dp"
+                android:text="Detener"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#B94E4E"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
